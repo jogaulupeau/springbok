@@ -46,6 +46,7 @@ reserved = {
     r'interface$': 'INTERFACE',
     r'alias$': 'ALIAS',
     r'global$': 'GLOBAL',
+    r'secondaryip$': 'SECONDARYIP',
 }
 
 tokens = [

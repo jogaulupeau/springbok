@@ -194,6 +194,7 @@ def p_line(p):
             | config_service_line NL
             | addrgrp_line NL
             | policy_set_line NL
+            | secondaryip_line NL
             | interface_line NL
             | end_line NL
             | next_line NL
@@ -436,6 +437,14 @@ def p_addrgrp_line(p):
 def p_service_group_line(p):
     '''service_group_line : CONFIG FIREWALL SERVICE GROUP'''
     push_state('service_group')
+
+
+# secondary ip
+
+### secondaryip line
+def p_secondaryip_line(p):
+    '''secondaryip_line : CONFIG SECONDARYIP'''
+    push_state('secondaryip')
 
 
 # interface
